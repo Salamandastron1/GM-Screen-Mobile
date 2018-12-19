@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
+import { View } from 'react-native';
 
-const PlayerScreen = (props) => {
-
-};
+const PlayerScreen = () => (
+  <View />
+);
 
 export default PlayerScreen;
