@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
+import { View } from 'react-native';
 
-const CodeForm = (props) => {
-
-};
+const CodeForm = () => (
+  <View />
+);
 
 export default CodeForm;
