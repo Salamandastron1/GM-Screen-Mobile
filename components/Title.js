@@ -18,13 +18,12 @@ const styles = {
     fontWeight: '600',
   },
   viewStyle: {
-    height: 60,
     borderRadius: 2,
     alignSelf: 'stretch',
     justifyContent: 'center',
     margin: 20,
     height: null,
-  }
+  },
 };
 
 Title.propTypes = {

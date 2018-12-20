@@ -4,14 +4,16 @@ import Button from './Button';
 import Title from './Title';
 import CardSection from './CardSection';
 
+const dice = require('./../assets/dice-twenty-faces-twenty.png');
+
 const LandingPage = () => (
   <View style={styles.containerStyle}>
     <Title>
       GM Screen
     </Title>
     <CardSection>
-      <Image 
-        source={require('./../assets/dice-twenty-faces-twenty.png')}
+      <Image
+        source={dice}
         style={styles.imageStyle}
       />
     </CardSection>
