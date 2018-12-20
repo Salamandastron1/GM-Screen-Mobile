@@ -2,6 +2,12 @@ import React from 'react';
 import { TouchableOpacity, Text } from 'react-native';
 import PropTypes from 'prop-types';
 
+const Button = ({ onPress, children }) => (
+  <TouchableOpacity onPress={onPress} style={styles.buttonStyle}>
+    <Text>{children}</Text>
+  </TouchableOpacity>
+);
+
 const styles = {
   buttonStyle: {
     flex: 1,
@@ -13,12 +19,6 @@ const styles = {
     alignItems: 'center',
   },
 };
-
-const Button = ({ onPress, children }) => (
-  <TouchableOpacity onPress={onPress} style={styles.buttonStyle}>
-    <Text>{children}</Text>
-  </TouchableOpacity>
-);
 
 Button.propTypes = {
   onPress: PropTypes.func.isRequired,
