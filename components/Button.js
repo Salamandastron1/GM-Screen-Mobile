@@ -4,19 +4,28 @@ import PropTypes from 'prop-types';
 
 const Button = ({ onPress, children }) => (
   <TouchableOpacity onPress={onPress} style={styles.buttonStyle}>
-    <Text>{children}</Text>
+    <Text style={styles.textStyle}>{children}</Text>
   </TouchableOpacity>
 );
 
 const styles = {
   buttonStyle: {
     flex: 1,
-    height: 20,
     backgroundColor: '#54b8c0',
     borderWidth: 1,
     borderRadius: 5,
     borderColor: '#54b8c0',
-    alignItems: 'center',
+    alignItems: 'stretch',
+    marginLeft: 10,
+    marginRight: 10,
+  },
+  textStyle: {
+    alignSelf: 'center',
+    color: '#f4d8b7',
+    fontSize: 30,
+    fontWeight: '600',
+    paddingTop: 10,
+    paddingBottom: 10,
   },
 };
 
