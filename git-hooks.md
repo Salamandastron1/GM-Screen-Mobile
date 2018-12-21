@@ -27,7 +27,7 @@ do
     printf "\t\033[32mESLint Passed: $FILE\033[0m"
   else
     printf "\t\033[41mESLint Failed: $FILE\033[0m"
-    PASS=false
+    LINTER_PASSED=false
   fi
 done
 
@@ -49,7 +49,7 @@ do
     printf "\t\033[32mTest Passed: $FILE\033[0m"
   else
     printf "\t\033[41mTest Failed: $FILE\033[0m"
-    PASS=false
+    TESTS_PASSED=false
   fi
 done
 
