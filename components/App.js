@@ -1,6 +1,19 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 import LandingPage from './LandingPage';
+import CodeForm from './CodeForm';
+
+const RootStack = createStackNavigator(
+  {
+    LandingPage,
+    CodeForm,
+  },
+  {
+    initialRouteName: 'LandingPage',
+  },
+);
+
+const AppContainer = createAppContainer(RootStack);
 
 
 export default class App extends React.Component {
@@ -13,18 +26,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <LandingPage />
-      </View>
+      <AppContainer />
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
