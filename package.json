@@ -5,13 +5,17 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "eject": "expo eject",
-    "eslint": "./node_modules/eslint/bin/eslint.js ./*.js"
+    "eslint": "./node_modules/eslint/bin/eslint.js ./*.js",
+    "test": "jest"
   },
   "dependencies": {
     "expo": "^31.0.2",
     "prop-types": "^15.6.2",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz"
+  },
+  "jest": {
+    "preset": "jest-react-native"
   },
   "devDependencies": {
     "babel-jest": "^23.6.0",
@@ -29,3 +33,4 @@
   },
   "private": true
 }
+
