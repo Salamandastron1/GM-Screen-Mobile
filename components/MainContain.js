@@ -19,11 +19,14 @@ const styles = {
 };
 
 MainContain.defaultProps = {
-  children: {} || [],
+  children: [],
 };
 
 MainContain.propTypes = {
-  children: PropTypes.object || PropTypes.array,
+  children: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 
 export default MainContain;

@@ -18,7 +18,10 @@ const styles = {
 };
 
 CardSection.propTypes = {
-  children: PropTypes.shape({}).isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]).isRequired,
 };
 
 export default CardSection;

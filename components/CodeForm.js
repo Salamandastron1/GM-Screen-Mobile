@@ -9,8 +9,7 @@ class CodeForm extends Component {
     super();
 
     this.state = {
-      title: '',
-      description: '',
+      code: '',
     };
 
     this.handleInput = this.handleInput.bind(this);
@@ -22,7 +21,7 @@ class CodeForm extends Component {
   }
 
   render() {
-    const { title, description } = this.state;
+    const { code } = this.state;
 
     return (
       <MainContain>
@@ -31,14 +30,10 @@ class CodeForm extends Component {
         </Title>
         <CardSection>
           <Input
-            text={title}
+            text={code}
             onChange={this.handleInput}
-            name="title"
-          />
-          <Input
-            text={description}
-            name="description"
-            onChange={this.handleInput}
+            name="code"
+            length={6}
           />
         </CardSection>
       </MainContain>
