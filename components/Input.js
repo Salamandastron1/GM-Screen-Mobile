@@ -2,15 +2,13 @@ import React from 'react';
 import { TextInput, View } from 'react-native';
 import PropTypes from 'prop-types';
 
-const Input = ({ text, onChange, name, length }) => (
+const Input = ({ text, onChange, name }) => (
   <View style={styles.containerBox}>
     <TextInput
       value={text}
       onChangeText={onChange}
       style={styles.inputBox}
       name={name}
-      editable= {true}
-      maxLength={length}
     />
   </View>
 );
@@ -28,7 +26,7 @@ const styles = {
     alignItems: 'stretch',
     marginLeft: 10,
     marginRight: 10,
-  }
+  },
 };
 
 Input.propTypes = {
