@@ -10,6 +10,7 @@ const RootStack = createStackNavigator(
   },
   {
     initialRouteName: 'LandingPage',
+    headerMode: 'none',
   },
 );
 

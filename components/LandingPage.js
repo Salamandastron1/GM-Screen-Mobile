@@ -8,6 +8,7 @@ import MainContain from './MainContain';
 const dice = require('./../assets/dice-twenty-faces-twenty.png');
 
 const LandingPage = (props) => (
+  
   <MainContain>
     <Title>
       GM Screen
