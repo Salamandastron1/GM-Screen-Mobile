@@ -15,9 +15,10 @@ class CodeForm extends Component {
     this.handleInput = this.handleInput.bind(this);
   }
 
-  handleInput(e) {
-    console.log(e);
-    this.setState({});
+  handleInput({ nativeEvent }) {
+    this.setState({
+      code: nativeEvent.text,
+    });
   }
 
   render() {
@@ -25,17 +26,17 @@ class CodeForm extends Component {
 
     return (
       <MainContain>
-        <Title>
-          Enter Code
-        </Title>
         <CardSection>
           <Input
-            text={code}
+            value={code}
             onChange={this.handleInput}
             name="code"
             length={6}
           />
         </CardSection>
+        <Title>
+          Enter Code
+        </Title>
       </MainContain>
     );
   }
