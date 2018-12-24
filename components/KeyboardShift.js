@@ -11,6 +11,8 @@ export default class KeyboardShift extends Component {
     this.state = {
       shift: new Animated.Value(0),
     };
+    this.handleKeyboardDidShow = this.handleKeyboardDidShow.bind(this);
+    this.handleKeyboardDidHide = this.handleKeyboardDidHide.bind(this);
   }
 
   componentDidMount() {
@@ -61,12 +63,12 @@ export default class KeyboardShift extends Component {
   }
 
   render() {
-    const { children } = this.props;
+    const { children: renderProp } = this.props;
     const { shift } = this.state;
 
     return (
       <Animated.View style={[styles.container, { transform: [{ translateY: shift }] }]}>
-        {children}
+        {renderProp}
       </Animated.View>
     );
   }
@@ -74,10 +76,8 @@ export default class KeyboardShift extends Component {
 
 const styles = {
   container: {
-    height: '100%',
-    left: 0,
-    position: 'absolute',
-    top: 0,
+    height: 40,
+    alignItems: 'stretch',
     width: '100%',
   },
 };

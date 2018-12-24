@@ -2,11 +2,11 @@ import React from 'react';
 import { TextInput, View } from 'react-native';
 import PropTypes from 'prop-types';
 
-const Input = ({ text, onChange, name }) => (
+const Input = ({ value, onChange, name }) => (
   <View style={styles.containerBox}>
     <TextInput
-      value={text}
-      onChangeText={onChange}
+      value={value}
+      onChange={onChange}
       style={styles.inputBox}
       name={name}
     />
@@ -30,7 +30,7 @@ const styles = {
 };
 
 Input.propTypes = {
-  text: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   name: PropTypes.string.isRequired,
 };
