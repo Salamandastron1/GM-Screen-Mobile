@@ -1,14 +1,14 @@
 # GM-Screen-Mobile
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/Salamandastron1/GM-Screen-Mobile.svg?columns=all)](https://waffle.io/Salamandastron1/GM-Screen-Mobile)
 
-GM-Mobile is the player answer to our Game Master role playing framework. Working in conjunction with our desktop app a Game Master and Players can feel even more immersed in their gameplay experience with event push notifications, character creation, and inventory management.
+GM-Mobile is the player answer to our Game Master role playing framework. Working in conjunction with our desktop appm our own backend game/accounts API a Game Master and Players can feel even more immersed in their gameplay experience with event push notifications, character creation, and inventory management.
 
 
 ### See it Live
 Coming soon!
 
 ### APIs Used
-* MovieDB.org 
+* 
 
 ### Primary Javascript technologies
 * React-Native
@@ -48,6 +48,6 @@ Coming soon
 
 ### Contributors
 
-Jessica Erickson: [Github](https://github.com/Jessica-Erickson/movie-tracker)<br>
 Tim Garrity: [Github](https://github.com/Salamandastron1)<br>
+Jessica Erickson: [Github](https://github.com/Jessica-Erickson/movie-tracker)<br>
 Ben Ghalami: [Github](https://github.com/bghalami)
