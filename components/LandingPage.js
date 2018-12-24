@@ -1,13 +1,14 @@
 import React from 'react';
-import { View, Image } from 'react-native';
+import { Image } from 'react-native';
 import Button from './Button';
 import Title from './Title';
 import CardSection from './CardSection';
+import MainContain from './MainContain';
 
 const dice = require('./../assets/dice-twenty-faces-twenty.png');
 
-const LandingPage = () => (
-  <View style={styles.containerStyle}>
+const LandingPage = (props) => (
+  <MainContain>
     <Title>
       GM Screen
     </Title>
@@ -18,21 +19,14 @@ const LandingPage = () => (
       />
     </CardSection>
     <CardSection>
-      <Button onPress={() => console.log('Ben!')}>
+      <Button onPress={() => props.navigation.navigate('CodeForm')}>
         Start
       </Button>
     </CardSection>
-  </View>
+  </MainContain>
 );
 
 const styles = {
-  containerStyle: {
-    flex: 1,
-    padding: 5,
-    alignItems: 'center',
-    backgroundColor: '#f4d8b7',
-    justifyContent: 'space-around',
-  },
   imageStyle: {
     height: 400,
     width: null,

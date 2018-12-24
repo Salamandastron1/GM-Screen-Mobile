@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
-const CardSection = ({ children }) => (
+const MainContain = ({ children }) => (
   <View style={styles.containerStyle}>
     {children}
   </View>
@@ -10,18 +10,23 @@ const CardSection = ({ children }) => (
 
 const styles = {
   containerStyle: {
+    flex: 1,
     padding: 5,
     alignItems: 'center',
-    backgroundColor: 'inherit',
-    flexDirection: 'row',
+    backgroundColor: '#f4d8b7',
+    justifyContent: 'space-around',
   },
 };
 
-CardSection.propTypes = {
+MainContain.defaultProps = {
+  children: [],
+};
+
+MainContain.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.array,
-  ]).isRequired,
+  ]),
 };
 
-export default CardSection;
+export default MainContain;

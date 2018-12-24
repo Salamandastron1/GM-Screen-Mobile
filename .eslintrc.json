@@ -7,6 +7,7 @@
       "function-paren-newline": 0,
       "func-names": 0,
       "implicit-arrow-linebreak": 0,
-      "no-use-before-define": ["error", { "variables": false }]
+      "no-use-before-define": ["error", { "variables": false }],
+      "react/prop-types": ["error", { "ignore": ["navigation"] }]
     }
 }
