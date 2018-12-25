@@ -10,5 +10,8 @@
       "no-use-before-define": ["error", { "variables": false }],
       "react/prop-types": ["error", { "ignore": ["navigation"] }],
       "object-curly-newline": 0
+    },
+    "globals": {
+        "fetch": true
     }
 }

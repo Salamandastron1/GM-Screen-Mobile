@@ -3,10 +3,12 @@ import Title from './Title';
 import MainContain from './MainContain';
 import CardSection from './CardSection';
 import Input from './Input';
+import Button from './Button';
+import apiCall from '../helpers/API';
 
 class CodeForm extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       code: '',
@@ -21,6 +23,18 @@ class CodeForm extends Component {
     });
   }
 
+  async determineRoute(code) {
+    const { navigation: navigate } = this.props;
+    const url = `https://ben/api/v300/${code}`;
+    const playerInfo = await apiCall(url);
+
+    if (playerInfo.created) {
+      navigate('Items');
+    } else {
+      navigate('CreateCharacter');
+    }
+  }
+
   render() {
     const { code } = this.state;
 
@@ -33,6 +47,13 @@ class CodeForm extends Component {
             name="code"
             length={6}
           />
+        </CardSection>
+        <CardSection>
+          <Button
+            onPress={() => this.determineRoute(code)}
+          >
+            Submit
+          </Button>
         </CardSection>
         <Title>
           Enter Code
