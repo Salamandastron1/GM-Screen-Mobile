@@ -17,9 +17,15 @@
   },
   "jest": {
     "preset": "jest-expo",
+    "setupFiles": [
+      "./jest-setup.js"
+    ],
     "transform": {
-    "\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
-  }
+      "\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-native|expo-react-native-adapter|react-navigation-stack|@react-navigation)"
+    ]
   },
   "devDependencies": {
     "babel-jest": "^23.6.0",
@@ -34,6 +40,7 @@
     "jest": "^23.6.0",
     "jest-expo": "^31.0.0",
     "jest-react-native": "^18.0.0",
+    "react-native-jest-mocks": "^1.4.0",
     "react-test-renderer": "^16.7.0"
   },
   "private": true
