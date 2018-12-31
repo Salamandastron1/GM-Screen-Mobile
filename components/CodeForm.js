@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Alert } from 'react-native';
 import Title from './Title';
 import MainContain from './MainContain';
 import CardSection from './CardSection';
@@ -25,13 +26,15 @@ class CodeForm extends Component {
 
   async determineRoute(code) {
     const { navigation: navigate } = this.props;
-    const url = `https://ben/api/v300/${code}`;
+    const url = `/api/v1/characters/play_code/${code}`;
     const playerInfo = await apiCall(url);
 
-    if (playerInfo.created) {
-      navigate('Items');
+    if (playerInfo.created === 1) {
+      navigate('PlayerScreen');
+    } else if (!playerInfo.created === 0) {
+      navigate('CharacterForm');
     } else {
-      navigate('CreateCharacter');
+      Alert.alert('go fuck yourself');
     }
   }
 
@@ -46,6 +49,7 @@ class CodeForm extends Component {
             onChange={this.handleInput}
             name="code"
             length={6}
+            placeholder="Enter Code"
           />
         </CardSection>
         <CardSection>
