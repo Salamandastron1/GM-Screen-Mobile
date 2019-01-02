@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import MainContain from './MainContain';
-import CardSection from './CardSection';
 import apiCall from '../helpers/API';
 import Title from './Title';
 import Treasures from './Treasures';
@@ -36,9 +35,7 @@ class PlayerScreen extends Component {
         <Title>
           {playerName}
         </Title>
-        <CardSection>
-          {treasure}
-        </CardSection>
+        {treasure}
       </MainContain>
     );
   }
