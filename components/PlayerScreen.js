@@ -4,6 +4,7 @@ import MainContain from './MainContain';
 import CardSection from './CardSection';
 import apiCall from '../helpers/API';
 import Title from './Title';
+import Treasures from './Treasures';
 
 class PlayerScreen extends Component {
   constructor(props) {
@@ -19,16 +20,17 @@ class PlayerScreen extends Component {
     const { navigation } = this.props;
     const characterId = navigation.getParam('id', '0');
     const url = `https://gm-screen-backend.herokuapp.com/api/v1/characters/${characterId}`;
-    const items = await apiCall(url);
+    const character = await apiCall(url);
 
     this.setState({
-      items,
+      items: character.treasures,
     });
   }
 
   render() {
     const { playerName, items } = this.state;
-    const treasure = items.map(item => <CardSection item={item} />);
+    const treasure = items.map(item => <Treasures item={item} />);
+
     return (
       <MainContain>
         <Title>

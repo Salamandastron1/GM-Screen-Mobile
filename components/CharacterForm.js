@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import MainContain from './MainContain';
 import CardSection from './CardSection';
 import Title from './Title';
@@ -6,31 +7,41 @@ import Input from './Input';
 import Button from './Button';
 
 class CharacterForm extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       name: '',
-      description: '',
     };
 
     this.handleInput = this.handleInput.bind(this);
+    this.determineRoute = this.determineRoute.bind(this);
   }
 
   handleInput({ nativeEvent }) {
-    let key;
-    if (nativeEvent.target === 93) {
-      key = 'name';
-    } else {
-      key = 'description';
-    }
     this.setState({
-      [key]: nativeEvent.text,
+      name: nativeEvent.text,
     });
   }
 
+  determineRoute(name) {
+    const { navigation } = this.props;
+    const characterId = navigation.getParam('id');
+    const url = `/api/v1/characters/${characterId}`;
+    const data = { name };
+
+    fetch(url, {
+      method: 'PUT',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    navigation.navigate('PlayerScreen', { name });
+  }
+
   render() {
-    const { name, description } = this.state;
+    const { name } = this.state;
 
     return (
       <MainContain>
@@ -44,16 +55,9 @@ class CharacterForm extends Component {
           />
         </CardSection>
         <CardSection>
-          <Input
-            value={description}
-            onChange={this.handleInput}
-            name="description"
-            length={50}
-            placeholder="Character Description"
-          />
-        </CardSection>
-        <CardSection>
-          <Button>
+          <Button
+            onPress={() => this.determineRoute(name)}
+          >
             Submit
           </Button>
         </CardSection>
@@ -64,5 +68,11 @@ class CharacterForm extends Component {
     );
   }
 }
+
+CharacterForm.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func.isRequired,
+  }).isRequired,
+};
 
 export default CharacterForm;

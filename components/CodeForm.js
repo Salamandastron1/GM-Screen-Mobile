@@ -32,7 +32,7 @@ class CodeForm extends Component {
     if (playerInfo.created === 1) {
       navigation.navigate('PlayerScreen', { id: playerInfo.id });
     } else if (playerInfo.created === 0) {
-      navigation.navigate('CharacterForm');
+      navigation.navigate('CharacterForm', { id: playerInfo.id });
     } else {
       Alert.alert('Not a valid code');
     }
