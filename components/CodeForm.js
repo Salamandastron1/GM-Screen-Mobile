@@ -25,16 +25,16 @@ class CodeForm extends Component {
   }
 
   async determineRoute(code) {
-    const { navigation: navigate } = this.props;
-    const url = `/api/v1/characters/play_code/${code}`;
+    const { navigation } = this.props;
+    const url = `https://gm-screen-backend.herokuapp.com/api/v1/characters/play_code/${code}`;
     const playerInfo = await apiCall(url);
 
     if (playerInfo.created === 1) {
-      navigate('PlayerScreen');
-    } else if (!playerInfo.created === 0) {
-      navigate('CharacterForm');
+      navigation.navigate('PlayerScreen', { id: playerInfo.id });
+    } else if (playerInfo.created === 0) {
+      navigation.navigate('CharacterForm');
     } else {
-      Alert.alert('go fuck yourself');
+      Alert.alert('Not a valid code');
     }
   }
 

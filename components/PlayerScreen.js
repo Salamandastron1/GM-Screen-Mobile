@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import MainContain from './MainContain';
 import CardSection from './CardSection';
-import * as API from '../helpers/API';
+import apiCall from '../helpers/API';
 import Title from './Title';
 
 class PlayerScreen extends Component {
@@ -15,8 +16,10 @@ class PlayerScreen extends Component {
   }
 
   async componentDidMount() {
-    const url = '/api/v1/characters/:id';
-    const items = await API.apiCall(url);
+    const { navigation } = this.props;
+    const characterId = navigation.getParam('id', '0');
+    const url = `https://gm-screen-backend.herokuapp.com/api/v1/characters/${characterId}`;
+    const items = await apiCall(url);
 
     this.setState({
       items,
@@ -25,17 +28,24 @@ class PlayerScreen extends Component {
 
   render() {
     const { playerName, items } = this.state;
+    const treasure = items.map(item => <CardSection item={item} />);
     return (
       <MainContain>
         <Title>
           {playerName}
         </Title>
         <CardSection>
-          {items}
+          {treasure}
         </CardSection>
       </MainContain>
     );
   }
 }
+
+PlayerScreen.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func.isRequired,
+  }).isRequired,
+};
 
 export default PlayerScreen;
