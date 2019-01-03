@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the shapshot 1`] = `
+<MainContain>
+  <CardSection>
+    <Input
+      length={20}
+      name="name"
+      onChange={[Function]}
+      placeholder="Character Name"
+      value=""
+    />
+  </CardSection>
+  <CardSection>
+    <Button
+      onPress={[Function]}
+    >
+      Submit
+    </Button>
+  </CardSection>
+  <Title>
+    Create Your Character
+  </Title>
+</MainContain>
+`;
