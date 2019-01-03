@@ -6,6 +6,7 @@ import CardSection from './CardSection';
 import Title from './Title';
 import Input from './Input';
 import Button from './Button';
+import apiCall from '../helpers/API';
 
 class CharacterForm extends Component {
   constructor(props) {
@@ -31,17 +32,17 @@ class CharacterForm extends Component {
     }
     const { navigation } = this.props;
     const characterId = navigation.getParam('id');
-    const url = `/api/v1/characters/${characterId}`;
+    const url = `https://gm-screen-backend.herokuapp.com/api/v1/characters/${characterId}`;
     const data = { name };
 
-    fetch(url, {
+    apiCall(url, {
       method: 'PUT',
       body: JSON.stringify(data),
       headers: {
         'Content-Type': 'application/json',
       },
     });
-    navigation.navigate('PlayerScreen', { name });
+    navigation.navigate('PlayerScreen', { id: characterId });
 
     return undefined;
   }

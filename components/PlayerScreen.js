@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
 import MainContain from './MainContain';
 import apiCall from '../helpers/API';
@@ -23,19 +24,22 @@ class PlayerScreen extends Component {
 
     this.setState({
       items: character.treasures,
+      playerName: character.name,
     });
   }
 
   render() {
     const { playerName, items } = this.state;
-    const treasure = items.map(item => <Treasures item={item} />);
+    const treasure = items.map(item => <Treasures key={item.id} {...item} />);
 
     return (
       <MainContain>
         <Title>
           {playerName}
         </Title>
-        {treasure}
+        <ScrollView>
+          {treasure}
+        </ScrollView>
       </MainContain>
     );
   }

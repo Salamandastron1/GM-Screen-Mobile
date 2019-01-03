@@ -1,25 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Image, Text } from 'react-native';
-import CardSection from './CardSection';
+import { Image, Text, View } from 'react-native';
 
-const sword = require('../assets/swords-emblem.svg');
-const key = require('../assets/key.svg');
-const book = require('../assets/black-book.svg');
+const weapon = require('../assets/swords-emblem.png');
+const key = require('../assets/key.png');
+const book = require('../assets/black-book.png');
+const gem = require('../assets/crystal-shine.png');
 
 const Treasures = ({ title, type }) => {
   const types = {
-    sword,
+    weapon,
     key,
     book,
+    gem,
   };
+  const newType = type.toLowerCase();
 
   return (
-    <CardSection>
+    <View style={styles.containerStyle}>
       <Text>{title}</Text>
-      <Image src={types[type]} />
-    </CardSection>
+      <Image
+        style={styles.imageStyle}
+        source={types[newType]}
+      />
+    </View>
   );
+};
+
+const styles = {
+  imageStyle: {
+    height: 100,
+    width: 100,
+  },
+  containerStyle: {
+    flexDirection: 'column',
+  },
 };
 
 Treasures.propTypes = {
