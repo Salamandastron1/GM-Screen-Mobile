@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the shapshot 1`] = `
+<Component
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "borderRadius": 2,
+      "height": null,
+      "justifyContent": "center",
+      "margin": 20,
+    }
+  }
+>
+  <Component
+    style={
+      Object {
+        "alignSelf": "center",
+        "color": "#7A000D",
+        "fontSize": 70,
+        "fontWeight": "600",
+      }
+    }
+  />
+</Component>
+`;
