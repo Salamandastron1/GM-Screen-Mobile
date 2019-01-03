@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should run 1`] = `<NavigationContainer />`;
+exports[`should match the shapshot 1`] = `<NavigationContainer />`;

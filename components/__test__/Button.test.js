@@ -2,9 +2,9 @@
 
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import App from '../App';
+import Button from '../Button';
 
 it('should match the shapshot', () => {
-  const tree = shallow(<App />);
+  const tree = shallow(<Button />);
   expect(tree).toMatchSnapshot();
 });
