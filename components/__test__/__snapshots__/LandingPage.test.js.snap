@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the shapshot 1`] = `
+<MainContain>
+  <Title>
+    GM Screen
+  </Title>
+  <CardSection>
+    <Component
+      source={1}
+      style={
+        Object {
+          "flex": 1,
+          "height": 400,
+          "width": null,
+        }
+      }
+    />
+  </CardSection>
+  <CardSection>
+    <Button
+      onPress={[Function]}
+    >
+      Start
+    </Button>
+  </CardSection>
+</MainContain>
+`;
