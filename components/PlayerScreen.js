@@ -5,31 +5,42 @@ import MainContain from './MainContain';
 import apiCall from '../helpers/API';
 import Title from './Title';
 import Treasures from './Treasures';
+import Button from './Button';
 
 class PlayerScreen extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      playerName: 'Tuchanka',
+      playerName: 'Player',
       items: [],
+      loading: true,
     };
+
+    this.fetchCharacter = this.fetchCharacter.bind(this);
   }
 
-  async componentDidMount() {
+  componentDidMount() {
+    this.fetchCharacter();
+  }
+
+  async fetchCharacter() {
     const { navigation } = this.props;
-    const characterId = navigation.getParam('id', '0');
+    const characterId = navigation.getParam('id');
     const url = `https://gm-screen-backend.herokuapp.com/api/v1/characters/${characterId}`;
     const character = await apiCall(url);
 
-    this.setState({
-      items: character.treasures,
-      playerName: character.name,
-    });
+    if (character.name) {
+      this.setState({
+        loading: false,
+        items: character.treasures,
+        playerName: character.name,
+      });
+    }
   }
 
   render() {
-    const { playerName, items } = this.state;
+    const { playerName, items, loading } = this.state;
     const treasure = items.map(item => <Treasures key={item.id} {...item} />);
     const title = `${playerName}'s Treasures`;
 
@@ -38,6 +49,15 @@ class PlayerScreen extends Component {
         <Title>
           {title}
         </Title>
+        {loading
+          ? (
+            <Button
+              onPress={this.fetchCharacter}
+            >
+              Refresh Page
+            </Button>
+          )
+          : null}
         <ScrollView
           style={styles.scrollStyle}
         >

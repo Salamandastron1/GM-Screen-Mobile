@@ -44,7 +44,7 @@ class CharacterForm extends Component {
     });
     navigation.navigate('PlayerScreen', { id: characterId });
 
-    return undefined;
+    return null;
   }
 
   render() {

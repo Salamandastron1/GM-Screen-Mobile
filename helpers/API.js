@@ -1,8 +1,8 @@
 export default async function apiCall(url, options) {
   let data;
+  let response;
 
   try {
-    let response;
     if (options) {
       response = await fetch(url, options);
     } else {
