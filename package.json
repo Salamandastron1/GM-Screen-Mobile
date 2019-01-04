@@ -5,7 +5,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "eject": "expo eject",
-    "eslint": "./node_modules/eslint/bin/eslint.js ./*.js"
+    "eslint": "./node_modules/eslint/bin/eslint.js ./*.js",
+    "test": "jest"
   },
   "dependencies": {
     "expo": "^31.0.2",
@@ -14,14 +15,45 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
     "react-navigation": "^3.0.9"
   },
+  "jest": {
+    "preset": "jest-expo",
+    "setupFiles": [
+      "<rootDir>jest-setup.js"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>jest-setup.js",
+    "transform": {
+      "\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-native|expo-react-native-adapter|react-navigation-stack|@react-navigation)"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "collectCoverageFrom": [
+      "components/*.{js,jsx}"
+    ]
+  },
   "devDependencies": {
+    "babel-jest": "^23.6.0",
     "babel-preset-expo": "^5.0.0",
+    "babel-preset-react-native": "^4.0.1",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "enzyme-to-json": "^3.3.5",
     "eslint": "^5.10.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.6.0",
+    "jest-enzyme": "^7.0.1",
+    "jest-expo": "^31.0.0",
+    "jest-react-native": "^18.0.0",
+    "react-dom": "^16.7.0",
+    "react-native-jest-mocks": "^1.4.0",
+    "react-test-renderer": "^16.7.0"
   },
   "private": true
 }

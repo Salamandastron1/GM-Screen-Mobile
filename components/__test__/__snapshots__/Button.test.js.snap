@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the shapshot 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  style={
+    Object {
+      "alignItems": "stretch",
+      "backgroundColor": "#54b8c0",
+      "borderColor": "#54b8c0",
+      "borderRadius": 5,
+      "borderWidth": 1,
+      "flex": 1,
+      "marginLeft": 10,
+      "marginRight": 10,
+    }
+  }
+>
+  <Component
+    style={
+      Object {
+        "alignSelf": "center",
+        "color": "#f4d8b7",
+        "fontSize": 30,
+        "fontWeight": "600",
+        "paddingBottom": 10,
+        "paddingTop": 10,
+      }
+    }
+  />
+</TouchableOpacity>
+`;
