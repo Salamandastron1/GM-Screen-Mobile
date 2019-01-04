@@ -14,7 +14,7 @@ const styles = {
     padding: 5,
     alignItems: 'center',
     backgroundColor: '#f4d8b7',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
   },
 };
 

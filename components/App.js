@@ -20,18 +20,8 @@ const RootStack = createStackNavigator(
 
 const AppContainer = createAppContainer(RootStack);
 
+const App = () => (
+  <AppContainer />
+);
 
-export default class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-
-    };
-  }
-
-  render() {
-    return (
-      <AppContainer />
-    );
-  }
-}
+export default App;
