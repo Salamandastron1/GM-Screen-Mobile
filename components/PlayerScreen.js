@@ -22,6 +22,13 @@ class PlayerScreen extends Component {
 
   componentDidMount() {
     this.fetchCharacter();
+    this.interval = setInterval(() => {
+      this.fetchCharacter();
+    }, 300000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
   async fetchCharacter() {
