@@ -13,15 +13,15 @@ const Title = ({ children }) => (
 const styles = {
   textStyle: {
     color: '#7A000D',
-    fontSize: 70,
+    fontSize: 60,
     alignSelf: 'center',
-    fontWeight: '600',
+    fontWeight: 'bold',
   },
   viewStyle: {
     borderRadius: 2,
     alignSelf: 'stretch',
     justifyContent: 'center',
-    margin: 20,
+    marginTop: 30,
     height: null,
   },
 };

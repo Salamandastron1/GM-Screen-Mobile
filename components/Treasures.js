@@ -18,7 +18,11 @@ const Treasures = ({ title, type }) => {
 
   return (
     <View style={styles.containerStyle}>
-      <Text>{title}</Text>
+      <Text
+        style={styles.textStyle}
+      >
+        {title.toUpperCase()}
+      </Text>
       <Image
         style={styles.imageStyle}
         source={types[newType]}
@@ -31,9 +35,20 @@ const styles = {
   imageStyle: {
     height: 100,
     width: 100,
+    borderRadius: 10,
   },
   containerStyle: {
-    flexDirection: 'column',
+    justifyContent: 'center',
+    margin: 10,
+  },
+  textStyle: {
+    flexWrap: 'wrap',
+    flex: 1,
+    width: 100,
+    alignItems: 'center',
+    fontFamily: 'HoeflerText-Regular',
+    fontWeight: '400',
+    marginBottom: 5,
   },
 };
 

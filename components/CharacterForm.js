@@ -26,7 +26,7 @@ class CharacterForm extends Component {
     });
   }
 
-  determineRoute(name) {
+  async determineRoute(name) {
     if (name.length === 0) {
       return Alert.alert('Please give your character a name');
     }
@@ -35,7 +35,7 @@ class CharacterForm extends Component {
     const url = `https://gm-screen-backend.herokuapp.com/api/v1/characters/${characterId}`;
     const data = { name };
 
-    apiCall(url, {
+    await apiCall(url, {
       method: 'PUT',
       body: JSON.stringify(data),
       headers: {
@@ -52,6 +52,9 @@ class CharacterForm extends Component {
 
     return (
       <MainContain>
+        <Title>
+          Create Your Character
+        </Title>
         <CardSection>
           <Input
             value={name}
@@ -68,9 +71,6 @@ class CharacterForm extends Component {
             Submit
           </Button>
         </CardSection>
-        <Title>
-          Create Your Character
-        </Title>
       </MainContain>
     );
   }

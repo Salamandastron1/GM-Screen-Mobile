@@ -43,6 +43,9 @@ class CodeForm extends Component {
 
     return (
       <MainContain>
+        <Title>
+          Enter Code
+        </Title>
         <CardSection>
           <Input
             value={code}
@@ -59,9 +62,7 @@ class CodeForm extends Component {
             Submit
           </Button>
         </CardSection>
-        <Title>
-          Enter Code
-        </Title>
+
       </MainContain>
     );
   }
