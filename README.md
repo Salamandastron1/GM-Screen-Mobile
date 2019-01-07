@@ -42,5 +42,3 @@ GM-Mobile uses Jest and Enzyme for all testing purposes
 ### Contributors
 
 Tim Garrity: [Github](https://github.com/Salamandastron1)<br>
-Jessica Erickson: [Github](https://github.com/Jessica-Erickson/movie-tracker)<br>
-Ben Ghalami: [Github](https://github.com/bghalami)
