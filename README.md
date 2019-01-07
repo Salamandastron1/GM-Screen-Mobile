@@ -33,8 +33,8 @@ GM-Mobile uses Jest and Enzyme for all testing purposes
 
 ### ScreenShots
 
-(Character Exists)[./assets/character-exists.gif];
-(Create New Character)[./assets/create-character.gif];
+(Character Exists)[!./assets/character-exists.gif]
+(Create New Character)[!./assets/create-character.gif]
 
 ### Original Assignment
 
