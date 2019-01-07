@@ -1,7 +1,7 @@
 # GM-Screen-Mobile
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/Salamandastron1/GM-Screen-Mobile.svg?columns=all)](https://waffle.io/Salamandastron1/GM-Screen-Mobile)
 
-GM-Mobile is the player answer to our Game Master role playing framework. Working in conjunction with our desktop appm our own backend game/accounts API a Game Master and Players can feel even more immersed in their gameplay experience with event push notifications, character creation, and inventory management.
+GM-Mobile is the player answer to our Game Master role playing framework. Working in conjunction with our desktop app our own backend game/accounts API a Game Master and Players can feel even more immersed in their gameplay experience with event push notifications, character creation, and inventory management.
 
 
 ### ScreenShots
