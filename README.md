@@ -6,12 +6,12 @@ GM-Mobile is the player answer to our Game Master role playing framework. Workin
 
 ### ScreenShots
 
-!(Character Exists)[/assets/character-exists.gif]
-!(Create New Character)[/assets/create-character.gif]
+![Character Exists](./assets/character-exists.gif)
+![Create New Character](./assets/create-character.gif)
 
 ### APIs Used
-* (GM-Screen-BackEnd)[https://gm-screen-backend.herokuapp.com]
-* (BackEnd Docs) [https://github.com/bghalami/gm_screen_backend]
+* [GM-Screen-BackEnd](https://gm-screen-backend.herokuapp.com)
+* [BackEnd Docs](https://github.com/bghalami/gm_screen_backend)
 
 ### Primary Javascript technologies
 * React-Native
