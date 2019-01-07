@@ -4,8 +4,10 @@
 GM-Mobile is the player answer to our Game Master role playing framework. Working in conjunction with our desktop appm our own backend game/accounts API a Game Master and Players can feel even more immersed in their gameplay experience with event push notifications, character creation, and inventory management.
 
 
-### See it Live
-Coming soon!
+### ScreenShots
+
+!(Character Exists)[./assets/character-exists.gif]
+!(Create New Character)[./assets/create-character.gif]
 
 ### APIs Used
 * (GM-Screen-BackEnd)[https://gm-screen-backend.herokuapp.com]
@@ -16,7 +18,9 @@ Coming soon!
 * React-Native Navigation
 * Eslint
 
-### Setup
+### See it Live
+
+#### Setup
 
 1. Clone down repo
 2. `npm install` from root directory
@@ -30,11 +34,6 @@ Coming soon!
 GM-Mobile uses Jest and Enzyme for all testing purposes
 
 `npm test` from the associated root directory
-
-### ScreenShots
-
-(Character Exists)[!./assets/character-exists.gif]
-(Create New Character)[!./assets/create-character.gif]
 
 ### Original Assignment
 
