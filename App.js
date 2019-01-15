@@ -1,9 +1,9 @@
 import React from 'react';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
-import LandingPage from './LandingPage';
-import CodeForm from './CodeForm';
-import CharacterForm from './CharacterForm';
-import PlayerScreen from './PlayerScreen';
+import LandingPage from './components/LandingPage';
+import CodeForm from './components/CodeForm';
+import CharacterForm from './components/CharacterForm';
+import PlayerScreen from './components/PlayerScreen';
 
 const RootStack = createStackNavigator(
   {
