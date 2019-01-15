@@ -17,6 +17,8 @@ GM-Mobile is the player answer to our Game Master role playing framework. Workin
 * React-Native
 * React-Native Navigation
 * Eslint
+* Jest
+* Enzyme
 
 ### See it Live
 
@@ -24,7 +26,7 @@ GM-Mobile is the player answer to our Game Master role playing framework. Workin
 
 1. Clone down repo
 2. `npm install` from root directory
-3. `npm start` and visit the browser window up opened by `expo`
+3. `npm start` and visit the browser window up opened by `expo` 
 4. Download `Expo` app to a mobile device or open in IOS/Android Simulator
 5. Open the app and select scan QR code then scan
 6. The `Javascript` will compile then run
@@ -42,3 +44,4 @@ GM-Mobile uses Jest and Enzyme for all testing purposes
 ### Contributors
 
 Tim Garrity: [Github](https://github.com/Salamandastron1)<br>
+Jessica Erickson: [Github](https://github.com/Jessica-Erickson)
