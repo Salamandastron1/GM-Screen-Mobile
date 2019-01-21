@@ -27,10 +27,10 @@ GM-Mobile is the player answer to our Game Master role playing framework. Workin
 1. Clone down repo
 2. `npm install` from root directory
 3. Download `expo` app to a mobile device or open in IOS/Android Simulator
-  1. If IOS/Android make sure Xcode or Java is up to date
+  - If IOS/Android make sure Xcode or Java is up to date
 4. `npm start` and visit the browser window up opened by `expo` 
-  1. For `expo` on mobile, open the app and select scan QR code then scan from browser tab
-  2. For simulator on desktop, go to browser tab and make sure select to run IOS or Android respectively
+  - For `expo` on mobile, open the app and select scan QR code then scan from browser tab
+  - For simulator on desktop, go to browser tab and make sure select to run IOS or Android respectively
 5. The `Javascript` will compile then run
 
 ### Test Driven Development
