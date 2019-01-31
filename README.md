@@ -19,7 +19,7 @@ GM-Mobile is the player answer to our Game Master role playing framework. Workin
 * Eslint
 * Jest
 * Enzyme
-<br>
+
 ### See it Live
 
 #### Setup
